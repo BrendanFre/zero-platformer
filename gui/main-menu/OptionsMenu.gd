@@ -22,4 +22,10 @@ func _on_CheckButton_toggled(button_pressed):
 
 
 func _on_Button_pressed():
-	print(get_root())
+	var rootOfScene = get_tree().root.get_child(0)
+	var menu = rootOfScene.get_child(4).get_child(0).get_child(0)
+	var optionsMenu = $"."
+	var mainMenu = load('res://gui/main-menu/menu.tscn')
+	var instance = mainMenu.instance()
+	menu.remove_child(optionsMenu)
+	menu.add_child(instance)

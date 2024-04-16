@@ -1,6 +1,4 @@
 extends VBoxContainer
-export(NodePath) var menu
-onready var node = get_node(menu)
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -18,9 +16,10 @@ func _ready():
 
 
 func _on_Options_pressed():
-	var optionsMenu = preload("res://gui/main-menu/OptionsMenu.tscn")
+	var menuContainer = $".."
+	var optionsMenu = load("res://gui/main-menu/OptionsMenu.tscn")
 	var optionsInstance = optionsMenu.instance()
-	node.add_child(optionsInstance)
+	menuContainer.add_child(optionsInstance)
 	optionsInstance.margin_top = 20
-	node.margin_top = 20
-	node.remove_child(self)
+	menuContainer.margin_top = 20
+	menuContainer.remove_child(self)
