@@ -23,3 +23,9 @@ func _on_Options_pressed():
 	optionsInstance.margin_top = 20
 	menuContainer.margin_top = 20
 	menuContainer.remove_child(self)
+
+
+func _on_StartGame_pressed():
+	var animate = get_tree().root.get_child(0).get_child(1)
+	if(animate.name == 'AnimationPlayer'):
+		animate.play('start-game')
