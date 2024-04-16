@@ -55,3 +55,4 @@ theme = ExtResource( 1 )
 text = "Apply"
 
 [connection signal="toggled" from="VBoxContainer/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]

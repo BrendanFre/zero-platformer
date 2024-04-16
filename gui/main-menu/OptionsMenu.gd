@@ -19,3 +19,7 @@ func _ready():
 func _on_CheckButton_toggled(button_pressed):
 	if button_pressed == true:
 		userSettings.subtitles = true
+
+
+func _on_Button_pressed():
+	print(get_root())
