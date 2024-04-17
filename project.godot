@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
@@ -27,6 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="zero-platformer"
+run/main_scene="res://gui/main-menu/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -38,6 +39,10 @@ window/size/height=360
 
 version_control_autoload_on_startup=true
 version_control_plugin_name="GitAPI"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [gui]
 
